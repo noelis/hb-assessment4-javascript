@@ -379,9 +379,14 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script>
   "use strict";
-  // put your code here
 
-  $("#make-a-porcupine").on("submit", AgreeableForm);
+  $(function(){
+    $('#agreeable-form').on('submit',function(event){
+        event.preventDefault() ;
+        $("#agreeable-text").html( "I like " + $('input#favorite-food-input').val() + ", too.");
+    });
+});
+
 </script>
 
 <div class="hint">
